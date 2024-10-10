@@ -1,6 +1,6 @@
 # Frontend Mentor - Testimonials grid section solution
 
-This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -24,10 +24,10 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot-desktop](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/screenshot-desktop.png)
-![screenshot-sm-desktop](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/screenshot-sm-desktop.png)
-![screenshot-tablet](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/screenshot-tablet.png)
-![screenshot-mobile](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/screenshot-mobile.png)
+![screenshot-desktop](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/assets/screenshots/screenshot-desktop.png)
+![screenshot-sm-desktop](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/assets/screenshots/screenshot-sm-desktop.png)
+![screenshot-tablet](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/assets/screenshots/screenshot-tablet.png)
+![screenshot-mobile](https://raw.githubusercontent.com/tomwinskell/testimonialsgrid/refs/heads/main/assets/screenshots/screenshot-mobile.png)
 
 ### Links
 
@@ -51,44 +51,42 @@ Users should be able to:
 To see how you can add code snippets, see below:
 
 ```html
-          <div class="card__header">
-            <div class="card__header__leftcol">
-              <img
-                class="card__image border--light-violet"
-                src="./assets/images/image-daniel.jpg"
-                alt="Daniel Clifford"
-              />
-            </div>
+<div class="card__header">
+  <div class="card__header__leftcol">
+    <img
+      class="card__image border--light-violet"
+      src="./assets/images/image-daniel.jpg"
+      alt="Daniel Clifford"
+    />
+  </div>
 
-            <div class="card__header__rightcol">
-              <h1 class="card__name">Daniel Clifford</h1>
-              <p class="card__title">Verified Graduate</p>
-            </div>
-          </div>
+  <div class="card__header__rightcol">
+    <h1 class="card__name">Daniel Clifford</h1>
+    <p class="card__title">Verified Graduate</p>
+  </div>
+</div>
 ```
+
 ```css
 /* card__header structure */
-.card__header
-{
+.card__header {
   display: flex;
   flex-direction: row;
 }
 
-.card__header__leftcol
-{
+.card__header__leftcol {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: flex-start;
 }
 
-.card__header__rightcol
-{
+.card__header__rightcol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: .4rem;
+  gap: 0.4rem;
 }
 ```
 
