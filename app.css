@@ -216,7 +216,7 @@ body
   background-color: var(--mod-violet);
   background-image: url("./assets/images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-position-x: right 6rem;
+  background-position-x: right 96px;
 }
 
 .card--dark-blackblue
@@ -292,6 +292,6 @@ body
   }
   .card--violet
   {
-    background-position-x: right 1.2rem;
+    background-position-x: right 18px;
   }
 }
