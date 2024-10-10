@@ -1,0 +1,290 @@
+:root {
+
+/* colors */
+--mod-violet: hsl(263, 55%, 52%);
+--dark-grayblue: hsl(217, 19%, 35%); /* dark */
+--dark-grayblue-50: hsla(217, 19%, 35%, 0.5); /* dark */
+--dark-grayblue-70: hsla(217, 19%, 35%, 0.7); /* dark */
+--dark-blackblue: hsl(219, 29%, 14%);
+--white: hsl(0, 0%, 100%);
+--light-violet: #A775F1;
+
+--light-gray: hsl(0, 0%, 81%); /* light */
+--light-gray-50: hsl(0, 0%, 81%, 0.5); /* light */
+--light-gray-70: hsl(0, 0%, 81%, 0.7); /* light */
+--light-grayblue: hsl(210, 46%, 95%);
+
+}
+
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* typography */
+/* barlow-semi-condensed-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-semi-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* global properties */
+body
+{
+  font-family: 'Barlow Semi Condensed';
+  box-sizing: border-box;
+  background-color: var(--light-gray);
+}
+
+/* card structure / layout */
+.card-grid
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-grid__container
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas:
+    "left left middle right"
+    "bottom-left bottom bottom right";
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 72rem;
+  height: fit-content;
+}
+
+.card
+{
+  background-color: var(--white);
+  padding: clamp(25px, 5vw, 30px);
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+/* grid areas */
+.card--left
+{
+  grid-area: left;
+}
+
+.card--middle
+{
+  grid-area: middle;
+}
+
+.card--right
+{
+  grid-area: right;
+}
+
+.card--bottom-left
+{
+  grid-area: bottom-left;
+}
+
+.card--bottom
+{
+  grid-area: bottom;
+}
+
+/* card__header structure */
+.card__header
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.card__header__leftcol
+{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.card__header__rightcol
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: .4rem;
+}
+
+/* card content properties */
+.card__image
+{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  transform: translate(0, -.1px);
+}
+
+.card__name
+{
+  font-size: .9rem;
+  color: var(--light-gray);
+  line-height: .8125;
+}
+
+.card__title
+{
+  font-size: .7rem;
+  color: var(--light-gray-50);
+  line-height: .6875;
+}
+
+.card__headline
+{
+  font-size: 1.4rem;
+  color: var(--light-grayblue);
+  margin: 1.5rem 0;
+  line-height: 1.6rem;
+}
+
+.card__quote
+{
+  font-size: .9rem;
+  color: var(--light-gray-70);
+  line-height: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+/* card color variations */
+.card--violet
+{
+  background-color: var(--mod-violet)
+}
+
+.card--dark-blackblue
+{
+  background-color: var(--dark-blackblue);
+}
+
+.card--dark-grayblue
+{
+  background-color: var(--dark-grayblue);
+}
+
+/* card font color variations */
+.card--light > .card__name
+{
+  color: var(--dark-grayblue);
+}
+
+.card--light > .card__title
+{
+  color: var(--dark-grayblue-50)
+}
+
+.card--light > .card__headline
+{
+  color: var(--dark-blackblue)
+}
+
+.card--light > .card__quote
+{
+  color: var(--dark-grayblue-70);
+}
+
+.border--purple
+{
+  border: 2px solid var(--mod-violet);
+}
+
+.border--light-violet
+{
+  border: 2px solid var(--light-violet);
+}
+
+/* breakpoints / responsive layouts */
+@media screen and (max-width: 1000px){
+  .card-grid__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+    "left left middle"
+    "bottom-left bottom bottom"
+    "right right right"
+  }
+}
+
+@media screen and (max-width: 750px){
+  .card-grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+    "left left"
+    "middle bottom-left"
+    "right right"
+    "bottom bottom"
+  }
+}
+
+@media (max-width: 550px) {
+  .card-grid__container
+  {
+    display: flex;
+    flex-direction: column;
+  }
+}
